@@ -1,0 +1,98 @@
+.shopping-cart {
+    padding: 4rem;
+  }
+  
+  .cart-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+  }
+  
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Added box shadow for image */
+  }
+  
+  .cart-item-details {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-item-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333; /* Changed text color for better readability */
+  }
+  
+  .cart-item-price {
+    font-size: 1rem;
+    color: #888;
+  }
+  
+  .cart-item-remove {
+    padding: 0.5rem 1rem;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Added transition for smoother hover effect */
+  }
+  
+  .cart-item-remove:hover {
+    background-color: #c9302c;
+  }
+  
+  .cart-total {
+    display: flex;
+    justify-content: space-between; /* Adjusted alignment */
+    margin-top: 2rem;
+  }
+  
+  .total-price {
+    text-align: right; /* Aligned total price to the right */
+  }
+  
+  .cart-total h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Changed text color */
+  }
+  
+  .proceed-to-payment {
+    padding: 1rem 2rem; /* Increased padding for better appearance */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Added transition for smoother hover effect */
+  }
+  
+  .proceed-to-payment:hover {
+    background-color: #0056b3;
+  }
+  
+  .empty-cart-message {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #d9534f;
+    padding: 2rem;
+    background-color: #fff3f3;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    margin-top: 2rem;
+  }

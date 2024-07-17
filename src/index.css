@@ -1,0 +1,270 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e8ab18;
+}
+
+@font-face {
+  font-family: 'ShoCard Caps NF';
+  src: url('./fonts/sho-card-caps.regular (1).ttf') format('truetype');
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #e8ab18;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo a {
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #009b8d;
+  font-family: 'ShoCard Caps NF', Arial, sans-serif;
+}
+
+header .search-bar {
+  position: relative;
+  margin-right: 1.5rem;
+}
+
+header .search-bar input.search-input {
+  padding: 0.5rem 1rem;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: width 0.3s ease-in-out;
+}
+
+header .search-bar input.search-input:focus {
+  outline: none;
+  border-color: #009b8d;
+  width: 350px;
+}
+
+header .search-bar button.search-button {
+  padding: 0.5rem 1rem;
+  background-color: #009b8d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+header .search-bar button.search-button:hover {
+  background-color: #007b6a;
+}
+
+nav {
+  background-color: #6a6b65;
+  border: 1px solid #515050;
+  position: fixed;
+  width: 100%;
+  top: 70px;
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+nav ul li {
+  padding: 1rem;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: font-size 0.2s ease;
+}
+
+nav ul li a.active {
+  color: #e8ab18;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: font-size 0.2s ease;
+}
+
+nav ul li.cart-icon {
+  margin-left: auto;
+  position: relative;
+}
+
+nav ul li.cart-icon a {
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li.cart-icon .cart-count {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #6a6b65;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #515050;
+}
+
+.dropdown-menu li {
+  padding: 1rem;
+  text-align: center;
+}
+
+.dropdown-menu li a {
+  color: white;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #6a6b65;
+  color: white;
+}
+
+footer .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  padding-top: 140px;
+}
+
+.payment-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 64vh;
+  margin-top: 200px;
+}
+
+.payment-h1 {
+  margin-left: 40%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 2rem 20rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.payment-button {
+  padding: 1rem 2rem;
+  background-color: #009b8d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.postage-details {
+  justify-content: space-between;
+  margin: 2rem 20rem 2rem 20rem;
+  
+}
+
+.total-amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 3rem 20rem 2rem 20rem;
+}
+
+@media (max-width: 640px) {
+  header .logo a {
+    font-size: 2rem;
+  }
+
+  header .search-bar input.search-input {
+    width: 200px;
+  }
+
+  header .search-bar input.search-input:focus {
+    width: 250px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 0.5rem;
+    flex: 1 1 100%;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .dropdown-toggle {
+    font-size: 1.2rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .dropdown-menu li {
+    flex: 1 1 100%;
+  }
+}

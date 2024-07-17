@@ -1,0 +1,117 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  padding-top: 140px; /* Adjust based on the combined height of the header and navbar */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #009b8d;
+  padding: 1rem;
+  border: 1px solid #9c9a9a;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: rgb(71, 70, 70);
+  margin-bottom: 1rem;
+}
+
+.product-card button {
+  padding: 0.5rem 1rem;
+  background-color: #6a6b65;
+  color: white;
+  border: 1px solid #2e2f2e;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.product-card button:hover {
+  background-color: #555;
+}
+
+.product-card.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 60%;
+  max-width: 600px;
+  max-height: 90vh;
+  background: #e8ab18; /* Make the background white to ensure the buttons are visible */
+  padding: 2rem;
+  border: 1px solid #302b2b;
+  border-radius: 10px;
+  box-shadow: 20px 20px 20px rgba(0.9, 0.9, 0.9, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card.expanded img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Hide the elements when the card is expanded */
+.product-card.expanded h3,
+.product-card.expanded p {
+  display: none;
+}
+
+.product-card.expanded .expanded-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.product-card.expanded .expanded-controls button {
+  padding: 0.5rem 1rem;
+  background-color: #6a6b65;
+  color: white;
+  border: 1px solid #2e2f2e;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card.expanded .expanded-controls button:hover {
+  background-color: #555;
+}
+
+/* Add transition effect for smooth expansion */
+.product-card img {
+  transition: all 0.3s ease;
+}
+
